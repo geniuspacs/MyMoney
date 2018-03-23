@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>registro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input [(ngModel)]="user.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Surname</ion-label>
+      <ion-input [(ngModel)]="user.surname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="user.gender">
+        <ion-option>Male</ion-option>
+        <ion-option>Female</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Birth Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="user.birth_date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+
+    <button ion-button (click)="registrar_usuario()">Submit</button>
+
+  </ion-list>
+</ion-content>
